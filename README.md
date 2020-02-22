@@ -1,7 +1,16 @@
 <<<<<<< HEAD
-# FlamingoAngular
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
+# Flamingo-Angular
+### Angular application for Flamingo
+Music is a part of each and every person’s life. Whether you enjoy it or
+not, it somehow finds its way everywhere. People use Instagram every
+day for multiple reasons: to find new clothes, see what their friends are
+doing, or sometimes share music. What if there was a platform like
+Instagram tailored to people who want to post what they are listening to at
+the moment and people could interact. If you like someone’s taste of
+music, you can ‘like’ the song or ‘comment’ on what you like about it. On
+top of liking and commenting, what if the user could add it to the # 1
+streaming platform in the United States, Spotify. Flamingo will integrate with the Spotify API so people can automatically add
+songs to their very own playlists.
 
 ## Development server
 
@@ -22,10 +31,3 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-=======
-# flamingo-frontend
->>>>>>> 1588a254d75831ac7a4a98e19403c4c9b4d623c0
