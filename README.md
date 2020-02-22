@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Flamingo-Angular
 ### Angular application for Flamingo
 Music is a part of each and every person’s life. Whether you enjoy it or
