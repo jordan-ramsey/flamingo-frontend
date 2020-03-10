@@ -1,0 +1,32 @@
+.card {
+    max-width: 400px;
+    margin: 2em auto;
+    text-align: center;
+    border: 55px solid #000;
+    border-radius: 30px;
+    border: #000;
+    text-align: center; 
+    padding: 100px; 
+    margin: auto
+  }
+
+  .card-content {
+    display:flex;
+    margin: 40 px;
+}
+
+.card-image {
+    width:12em; 
+    height:16em; 
+    margin: 20px; 
+}
+
+.card-title {
+    margin-bottom: 20px; 
+    font-size: 35px;
+}
+
+.card-button {
+    margin-right:5px;
+    margin-bottom: 5px;
+}

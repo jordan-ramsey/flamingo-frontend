@@ -1,0 +1,24 @@
+<mat-card class="card" id="card">
+    <mat-card-content class="card-content">
+        <div>
+            <img class="card-image" mat-card-image src="assets/images/signin-image3.png" type="img/png">
+        </div>
+      <div>
+        <mat-card-header>
+          <mat-card-title class="mat-display-1 card-title">Sign in</mat-card-title>
+        </mat-card-header>
+        <mat-form-field>
+          <mat-icon class="icon" matPrefix>person</mat-icon>          
+          <input matInput placeholder="username">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-icon class="icon" matPrefix>lock</mat-icon>
+          <input matInput placeholder="password">
+        </mat-form-field><br/>
+        <button color="primary" mat-raised-button>Sign in</button>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button class="card-button" mat-button routerLink="/register">Create an account</button>
+    </mat-card-actions>
+</mat-card>
