@@ -9,13 +9,13 @@
         </mat-card-header>
         <mat-form-field>
           <mat-icon class="icon" matPrefix>person</mat-icon>          
-          <input matInput placeholder="username">
+          <input  [(ngModel)]="userData.username"  matInput placeholder="username">
         </mat-form-field>
         <mat-form-field>
           <mat-icon class="icon" matPrefix>lock</mat-icon>
-          <input matInput placeholder="password">
+          <input [(ngModel)]="userData.password" matInput type="password"  placeholder="password">
         </mat-form-field><br/>
-        <button color="primary" mat-raised-button>Sign in</button>
+        <button color="primary" (click)='login()' mat-raised-button>Sign in</button>
       </div>
     </mat-card-content>
     <mat-card-actions>
