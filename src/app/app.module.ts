@@ -4,6 +4,10 @@ import { MatCardModule, MatButtonModule, MatInputModule } from '@angular/materia
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 import { HttpClientModule }    from '@angular/common/http';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
@@ -12,9 +16,12 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { HeaderComponent } from './components/header/header.component';
+import { PostComponent } from './components/post/post.component';
 
 const appRoutes: Routes = [
-  { path: 'login', component: LoginComponent },
+  {path: '', component: LoginComponent},
+  {path: 'login', component: LoginComponent },
   {path: 'register', component: RegisterComponent},
   {path: 'dashboard', component: DashboardComponent}
 ];
@@ -24,7 +31,9 @@ const appRoutes: Routes = [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    DashboardComponent
+    DashboardComponent,
+    HeaderComponent,
+    PostComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -38,7 +47,9 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     RouterModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatToolbarModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

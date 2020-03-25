@@ -5,18 +5,22 @@
           <mat-card-title class="mat-display-1 card-title">Join the flock</mat-card-title>
         </mat-card-header>
         <mat-form-field>
-          <mat-icon class="icon" matPrefix>person</mat-icon>          
-          <input matInput placeholder="username">
+          <mat-icon class="icon" matPrefix>verified_user</mat-icon>          
+          <input matInput [(ngModel)]="userData.username" placeholder="username">
         </mat-form-field>
         <mat-form-field>
-          <mat-icon class="icon" matPrefix>email</mat-icon>
-          <input matInput placeholder="email">
+          <mat-icon class="icon" matPrefix>person</mat-icon>
+          <input matInput [(ngModel)]="userData.first" placeholder="first name">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-icon class="icon" matPrefix>person</mat-icon>
+          <input matInput [(ngModel)]="userData.last" placeholder="last name">
         </mat-form-field>
         <mat-form-field>
             <mat-icon class="icon" matPrefix>lock</mat-icon>
-            <input matInput placeholder="password">
+            <input matInput [(ngModel)]="userData.password" placeholder="password">
           </mat-form-field> <br>
-        <button color="primary" mat-raised-button style="margin-right:5px; margin-bottom: 5px;">Register</button>
+        <button color="primary" (click)="register()" mat-raised-button style="margin-right:5px; margin-bottom: 5px;">Register</button>
       </div>
       <div>
         <img class="card-image" mat-card-image src="assets/images/signin-image3.png" type="img/png">
