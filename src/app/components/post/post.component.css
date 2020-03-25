@@ -1,0 +1,37 @@
+.card {
+    max-width: 400px;
+    max-height: 600px;
+    margin: 2em auto;
+    text-align: center;
+    border: 55px solid #000;
+    border: #000;
+    text-align: center; 
+    margin: auto;
+    background-color: #F8F8F8;
+  }
+
+  .card-content {
+    display:flex;
+    margin: 40 px;
+}
+
+.card-image {
+    width:12em; 
+    height:16em; 
+    margin: 20px; 
+}
+
+.card-title {
+    margin-bottom: 20px; 
+    font-size: 35px;
+}
+
+.card-button {
+    margin-right:5px;
+    margin-bottom: 5px;
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
