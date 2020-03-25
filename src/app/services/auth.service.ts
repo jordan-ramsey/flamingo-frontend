@@ -72,4 +72,8 @@ export class AuthService {
     });
     return promise;
   }
+
+  isLoggedIn() {
+    return localStorage.getItem('user') != null;
+  }
 }
