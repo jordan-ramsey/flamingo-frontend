@@ -46,9 +46,9 @@ export class AuthService {
   }
 
   // Parse JWT and create user from payload
-  decodeToken(token: String) {
+  decodeToken(token: string) {
     let payload = JSON.parse(window.atob(token.split('.')[1])); 
-    let currentUser = new User(payload.public_id, payload.username, payload.first, payload.last);
+    let currentUser = new User(payload.public_id, payload.username, payload.first, payload.last, token);
     localStorage.setItem('user', JSON.stringify(currentUser));
     
   }
