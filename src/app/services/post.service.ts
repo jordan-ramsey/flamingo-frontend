@@ -16,4 +16,9 @@ export class PostService {
       let url = `${this.baseUrl}/posts`;
       return this.http.get(url, {headers: this.header}).toPromise();
   }
+
+  createPost(post): any {
+    let url = `${this.baseUrl}/posts`;
+    return this.http.post(url, post, {headers: this.header}).toPromise();
+  }
 }

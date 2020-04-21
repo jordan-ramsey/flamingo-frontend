@@ -1,7 +1,25 @@
-<div class="header">
-  <mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <span>Flamingo</span>
-    </mat-toolbar-row>
+<mat-toolbar class="header" >
+  <mat-toolbar-row>
+    <img class="card-image" src="assets/images/signin-image3.png" type="img/png">
+    <a href="/dashboard"><h1 style="font-size: 28px;"> Flamingo</h1></a>
+    <span class="fill-space"></span>
+      <div>
+        <a mat-button 
+              > 
+              <mat-icon matPrefix>search</mat-icon>  
+              Search 
+          </a>
+          <a mat-button 
+              > 
+              <mat-icon matPrefix>person</mat-icon>  
+              Profile 
+          </a>
+          <a mat-button 
+              > 
+              <mat-icon matPrefix>exit_to_app</mat-icon>
+              Logout 
+          </a>
+      </div>
+  </mat-toolbar-row>
 </mat-toolbar>
-</div>
+            

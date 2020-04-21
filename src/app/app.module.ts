@@ -6,8 +6,7 @@ import { NgModule, Component } from '@angular/core';
 import { HttpClientModule }    from '@angular/common/http';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-
-
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
@@ -19,6 +18,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PostComponent } from './components/post/post.component';
 import { AuthGuardService } from './services/auth-guard.service';
+import { AddPostDialogComponent } from './components/add-post-dialog/add-post-dialog.component';
 
 const appRoutes: Routes = [
   {path: '', component: LoginComponent},
@@ -34,7 +34,8 @@ const appRoutes: Routes = [
     RegisterComponent,
     DashboardComponent,
     HeaderComponent,
-    PostComponent
+    PostComponent,
+    AddPostDialogComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -50,9 +51,13 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule,
     MatToolbarModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule
   ],
   providers: [],
+  entryComponents: [
+    AddPostDialogComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

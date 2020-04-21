@@ -1,0 +1,17 @@
+<div style="text-align: center; padding: 40px;">
+    <h1 mat-dialog-title style="font-size: 30px; margin-bottom: 30px;">Create Post</h1>
+    <div mat-dialog-content>
+        <mat-form-field>
+            <mat-icon class="icon" matPrefix>link</mat-icon>          
+            <input [(ngModel)]="post.spotify_uri" matInput placeholder="Spotify URI">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-icon class="icon" matPrefix>description</mat-icon>
+            <input [(ngModel)]="post.description" matInput placeholder="Description">
+        </mat-form-field><br/>
+    </div>
+    <div style="display:block;" mat-dialog-actions>
+        <button color="primary" (click)='createPost()' mat-raised-button>Create Post</button><br/><br/>
+        <button mat-button (click)="cancel()">Cancel</button>
+    </div>
+</div>

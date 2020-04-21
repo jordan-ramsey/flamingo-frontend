@@ -1,9 +1,17 @@
 <app-header></app-header>
-<body style="margin: 100px; padding-bottom: 400px;">
-    <app-post
-        ng-show="posts.length > 0"
-        *ngFor="let post of posts"
-        [post]=post>
-    </app-post>
+<body style="margin: 100px; padding-bottom: 600px;background-color: #FAFAFA; ">
+    <div style="text-align: center;">
+        <button mat-raised-button (click)="openDialog()" style="margin-bottom:25px;margin-top:5px;" >
+            <mat-icon matPrefix>add</mat-icon>
+            Add Post
+        </button>
+    </div>
+    <div style="padding-bottom: 30px;">
+        <app-post
+            ng-show="posts.length > 0"
+            *ngFor="let post of posts"
+            [post]=post>
+        </app-post>
+    </div>
 </body>
 
