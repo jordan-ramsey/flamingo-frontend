@@ -1,0 +1,16 @@
+<div style="text-align: center; padding: 40px;">
+    <h1 mat-dialog-title style="font-size: 30px; margin-bottom: 30px;">Search Users</h1>
+    <div mat-dialog-content>
+        <mat-form-field >
+            <mat-icon class="icon" matPrefix>search</mat-icon>          
+            <input (keyup)="onKeyUp($event)" matInput placeholder="Username">
+        </mat-form-field>
+        <mat-nav-list>
+            <mat-list-item style="margin-bottom: 10px;" *ngFor="let user of users"> 
+                <img src="https://material.angular.io/assets/img/examples/shiba1.jpg">
+                <button mat-button (click)="handleClick(user.id)"> {{ user.username }}</button>
+            </mat-list-item>
+        </mat-nav-list>
+    </div>
+    <button mat-button (click)="cancel()">Cancel</button>
+</div>

@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from '../models/user';
@@ -11,7 +12,7 @@ export class AuthService {
   private baseUrl = 'http://localhost:5000';
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
    login(userData: Object): any {
     var promise = new Promise((resolve, reject) => {
@@ -27,6 +28,11 @@ export class AuthService {
       });
     });
     return promise;
+  }
+
+  logout() {
+    localStorage.clear();
+    this.router.navigate(['/login']);
   }
 
   register(userData: Object): any {
@@ -46,9 +52,9 @@ export class AuthService {
   }
 
   // Parse JWT and create user from payload
-  decodeToken(token: String) {
+  decodeToken(token: string) {
     let payload = JSON.parse(window.atob(token.split('.')[1])); 
-    let currentUser = new User(payload.public_id, payload.username, payload.first, payload.last);
+    let currentUser = new User(payload.public_id, payload.username, payload.first, payload.last, token);
     localStorage.setItem('user', JSON.stringify(currentUser));
     
   }

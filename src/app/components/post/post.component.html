@@ -1,12 +1,21 @@
 <mat-card class="card" id="card">
     <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>The Corgi</mat-card-title>
+        <button mat-button *ngIf="user">
+            <mat-card-title class="card-title" [routerLink]="['/profile', user.id]">{{user.username}}</mat-card-title>
+        </button>
       </mat-card-header>
     <mat-card-content> 
-        <iframe id ="spotify" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>  
+        <iframe #spotify width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>  
+    <p>{{post.description}}</p>
     </mat-card-content>
     <mat-card-actions>
+        <div style="text-align: left">
+            <button mat-icon-button disabled>
+                <mat-icon>favorite</mat-icon>
+              </button>
+              {{0}}
+        </div>
     </mat-card-actions>
 </mat-card>
 
