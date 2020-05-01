@@ -4,18 +4,15 @@
     <a href="/dashboard"><h1 style="font-size: 28px;"> Flamingo</h1></a>
     <span class="fill-space"></span>
       <div>
-        <a mat-button 
-              > 
+        <a mat-button (click)="openDialog()" > 
               <mat-icon matPrefix>search</mat-icon>  
               Search 
           </a>
-          <a mat-button 
-              > 
+          <a mat-button [routerLink]="['/profile', authService.getCurrentUser().id]"> 
               <mat-icon matPrefix>person</mat-icon>  
               Profile 
           </a>
-          <a mat-button 
-              > 
+          <a mat-button (click)="authService.logout()"> 
               <mat-icon matPrefix>exit_to_app</mat-icon>
               Logout 
           </a>

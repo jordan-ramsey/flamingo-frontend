@@ -7,6 +7,8 @@ import { HttpClientModule }    from '@angular/common/http';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
@@ -19,12 +21,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { PostComponent } from './components/post/post.component';
 import { AuthGuardService } from './services/auth-guard.service';
 import { AddPostDialogComponent } from './components/add-post-dialog/add-post-dialog.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { SearchDialogComponent } from './components/search-dialog/search-dialog.component';
 
 const appRoutes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'login', component: LoginComponent },
   {path: 'register', component: RegisterComponent},
-  {path: 'dashboard', canActivate: [AuthGuardService], component: DashboardComponent}
+  {path: 'dashboard', canActivate: [AuthGuardService], component: DashboardComponent},
+  {path: 'profile/:id', canActivate: [AuthGuardService], component: ProfileComponent}
 ];
 
 @NgModule({
@@ -35,7 +40,9 @@ const appRoutes: Routes = [
     DashboardComponent,
     HeaderComponent,
     PostComponent,
-    AddPostDialogComponent
+    AddPostDialogComponent,
+    ProfileComponent,
+    SearchDialogComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -52,11 +59,14 @@ const appRoutes: Routes = [
     FormsModule,
     MatToolbarModule,
     MatSnackBarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatDividerModule,
+    MatListModule
   ],
   providers: [],
   entryComponents: [
-    AddPostDialogComponent
+    AddPostDialogComponent,
+    SearchDialogComponent
   ],
   bootstrap: [AppComponent]
 })

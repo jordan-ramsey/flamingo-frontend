@@ -23,8 +23,6 @@ export class RegisterComponent implements OnInit {
   register(): any {
     this.authService.register(this.userData)
     .then(() => {
-      document.location.href = 'http://127.0.0.1:5000/auth';
-
       this.router.navigate(['/dashboard']);
     });
   }
